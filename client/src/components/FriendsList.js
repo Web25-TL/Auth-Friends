@@ -16,9 +16,12 @@ export function FriendsList(props) {
   console.log(friends)
     return(
         <div>
-           {friends && friends.map((item, index) => {
-               return <FriendCard item={item} key={index} />
-           })} 
+           {friends ? friends.map((item, index) => {
+               return <FriendCard item={item} key={index} /> 
+               
+           }):
+            <h3>Loading</h3>
+           } 
         </div>
     )
 }
